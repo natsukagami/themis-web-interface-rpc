@@ -4,6 +4,7 @@ import (
 	"flag"
 	"io/ioutil"
 	"log"
+	"strings"
 
 	"github.com/natsukagami/themis-web-interface-rpc"
 
@@ -31,6 +32,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	key = strings.TrimSpace(key)
 	if key == "" {
 		log.Println("Đang tạo cặp key mới cho Themis của bạn!")
 		role, err := ui.Select("Bạn là một máy chấm (server) hay một máy chạy themis-web-interface (client) thôi?", []string{"server", "client"}, &input.Options{
