@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+message File {
+  string key = 1;
+  string checksum = 2;
+  string filename = 3;
+  bytes content = 4;
+}
+
+message Update {
+  string type = 1;
+  string message = 2;
+}
+
+message Metadata {
+  string key = 1;
+  string checksum = 2;
+}
+
+message Empty {
+	string key = 1;
+}
+
+message Key {
+  string server = 1;
+  string client = 2;
+}
+
+service RPC {
+  rpc CreateKey(Empty) returns (Key) {}
+  rpc FetchUpdates(Empty) returns (stream Update) {}
+  rpc SendFile(File) returns (Metadata) {}
+  rpc DeleteFile(File) returns (Empty) {}
+  rpc ReceiveFile(Metadata) returns (File) {}
+}
