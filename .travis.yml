@@ -2,8 +2,8 @@ language: go
 go:
 - '1.10'
 script:
-- go build -o twi-rpc-client cmd/twi-rpc-client/...
-- go build -o twi-rpc-server cmd/twi-rpc-server/...
+- go build -o twi-rpc-client cmd/twi-rpc-client/*
+- go build -o twi-rpc-server cmd/twi-rpc-server/*
 - go test -v ./...
 deploy:
   provider: releases
