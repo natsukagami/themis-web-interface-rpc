@@ -8,7 +8,8 @@ import (
 
 	"github.com/natsukagami/themis-web-interface-rpc"
 
-	"github.com/tcnksm/go-input"
+	// Use my fork because Windows screws up
+	"github.com/natsukagami/go-input"
 )
 
 var (

@@ -60,16 +60,16 @@
   version = "v0.0.6"
 
 [[projects]]
+  branch = "master"
+  name = "github.com/natsukagami/go-input"
+  packages = ["."]
+  revision = "38bb793e9754cf4f47ac94dc7bda49e4077c7207"
+
+[[projects]]
   name = "github.com/pkg/errors"
   packages = ["."]
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/tcnksm/go-input"
-  packages = ["."]
-  revision = "548a7d7a8ee8fcb3d013fae6acf857da56165975"
 
 [[projects]]
   branch = "master"
@@ -170,6 +170,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "5aed62083ae4b1d0af97f98737db9cfa644f0b8b880edb141f6604fd4e399ecd"
+  inputs-digest = "894f58222fc03afd60cd08bb1aac3126df573e5f56b6e1f23f77fa757d6ef9eb"
   solver-name = "gps-cdcl"
   solver-version = 1
